@@ -7,27 +7,19 @@
     <title>Actividad 6:Estructura condicional "si-sino" </title>
     <meta name=" viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        input {
-            padding: 5px;
-            margin: 5px;
-            width: 150px;
-        }
-        button {
-            padding: 8px 15px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .resultado {
-            font-weight: bold;
-            margin-top: 15px;
-        }
-    </style>
+         function comprobador() {
+             let edad; 
+             edad = parseInt(prompt("¿Cuántos años tienes?"), 10); 
+
+             if (edad < 18){
+                 alert ("Eres menor de edad"); 
+            {
+            else {
+                alert ("Eres mayor de edad");
+            {
+                alert("¿He acertado?");
+         {
+                     
     </script>
 </head>
 
@@ -41,27 +33,5 @@
     <button onclick="Comprobar()">Comprobar</button>
     <p id="mensaje">¡El resultado se mostrará aquí!</p>
 
-    <div id="resultado" class="resultado"></div>
-
-    <script>
-        function Comprobar() {
-            let numero = document.getElementById("numero").value;
-            numero = parseInt(numero);
-
-            if (isNaN(numero)) {
-                document.getElementById("resultado").innerHTML = 
-                    "<p style='color:red;'>Por favor, ingresa un número válido.</p>";
-                return;
-            }
-
-            if (numero % 2 === 0) {
-                document.getElementById("resultado").innerHTML = 
-                    `<p>El número <strong>${numero}</strong> es <span style='color:blue;'>PAR</span>.</p>`;
-            } else {
-                document.getElementById("resultado").innerHTML = 
-                    `<p>El número <strong>${numero}</strong> es <span style='color:green;'>IMPAR</span>.</p>`;
-            }
-        }
-    </script>
  </body> 
 </html>
