@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <META name="description" content="Actividad 6 por 'Mariafé roces yactayo">
+    <title>Actividad 6:Estructura condicional "si-sino" </title>
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+            width: 150px;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .resultado {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+    </script>
+</head>
+
+ <body>
+    <h1>Actividad 6: Estructura condicional</h1>
+    <p>Escribe un número el cuadro de texto y pulsa en el bóton para comprobar si es par o impar.</p> 
+    <label for="numero">Introduce un número:</label>
+    <input type="text" id="numero" placeholder="Ejemplo: 7">
+    
+    <br>
+    <button onclick="Comprobar()">Comprobar</button>
+    <p id="mensaje">¡El resultado se mostrará aquí!</p>
+
+    <div id="resultado" class="resultado"></div>
+
+    <script>
+        function Comprobar() {
+            // Obtener el valor del input
+            let numero = document.getElementById("numero").value;
+
+            // Convertir a número
+            numero = parseInt(numero);
+
+            // Validar si el valor ingresado es un número
+            if (isNaN(numero)) {
+                document.getElementById("resultado").innerHTML = 
+                    "<p style='color:red;'>Por favor, ingresa un número válido.</p>";
+                return;
+            }
+
+            // Determinar si es par o impar
+            if (numero % 2 === 0) {
+                document.getElementById("resultado").innerHTML = 
+                    `<p>El número <strong>${numero}</strong> es <span style='color:blue;'>PAR</span>.</p>`;
+            } else {
+                document.getElementById("resultado").innerHTML = 
+                    `<p>El número <strong>${numero}</strong> es <span style='color:green;'>IMPAR</span>.</p>`;
+            }
+        }
+    </script>
+ </body> 
+</html>
