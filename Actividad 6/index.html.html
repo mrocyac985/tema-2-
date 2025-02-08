@@ -45,20 +45,15 @@
 
     <script>
         function Comprobar() {
-            // Obtener el valor del input
             let numero = document.getElementById("numero").value;
-
-            // Convertir a número
             numero = parseInt(numero);
 
-            // Validar si el valor ingresado es un número
             if (isNaN(numero)) {
                 document.getElementById("resultado").innerHTML = 
                     "<p style='color:red;'>Por favor, ingresa un número válido.</p>";
                 return;
             }
 
-            // Determinar si es par o impar
             if (numero % 2 === 0) {
                 document.getElementById("resultado").innerHTML = 
                     `<p>El número <strong>${numero}</strong> es <span style='color:blue;'>PAR</span>.</p>`;
