@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <META name="description" content="Actividad 4 por 'Mariafé roces yactayo">
+    <title>Actividad 4: Operadores aritméticos</title>
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function Calcular() {
+            let a = parseFloat(prompt("Introduce el primer número (a):"))
+            let b = parseFloat(prompt("Introduce el segundo número (b):"))
+            
+            if (isNaN(a) || isNaN(b)) {
+                alert("por favor, ingresa valores numéricos válidos.");
+                return; 
+            }
+              
+            let suma = a + b;
+            let resta = a - b;
+            let multiplicacion = a * b;
+            let division = b !== 0 ? (a / b) : "No se puede dividir por cero"; 
+            let modulo = b !== 0 ? (a % b) : "No se puede calcular el módulo con divisor 0";
+             
+            alert(
+                "Primer número (a): " + a + "\n" + 
+                "Segundo número (b): " + b + "\n" + 
+                "Suma (a + b): " + suma + "\n" + 
+                "Resta (a - b): " + resta + "\n" + 
+                "Multiplicacion (a*b): " + multiplicacion + "\n" + 
+                "division (a / b): " + division + "\n" + 
+                "Modulo (a % b): " + modulo
+
+            );
+        }
+    </script>
+</head>
+
+ <body>
+    <h1>Actividad 4: Operadores aritméticos</h1>
+    <p>Al pulsar el botón se le pedirá al usuario 2 números "a" y "b" y se mostrará un mensaje con el valor ddel primer númer (a), del segundo (b), de la suma (a+b), de la resta(a-b), de la multiplicación (a*b), de la división (a/b) y del resto (a%b). Cada operación se debe mostrar en una línea distinta.</p> 
+    <button onclick="Calcular()">Calcular</button>
+ </body> 
+</html>
