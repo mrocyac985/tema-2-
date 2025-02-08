@@ -9,24 +9,22 @@
     <script src=".js/script.js"></script>
     <script>
         function Saludar() {
-            alert("¡hola!");
-            segundafuntion("emoji")
-            
+            alert("¡Hola!");
+            emoji(); 
         }
 
         function despedirse() {
-            alert("¡:)!")
-            segundafuntion("emoji")
-        }
+            alert("¡Adiós! :)");
+            emoji();
 
-         function emoji( ) {
-            alert("¡emoji!")
-         }
+        function emoji() {
+            alert("¡Emoji!");
+        }
     </script>
 </head>
-
- <body>
+<body>
+    <h1>Actividad: Saludar y Despedirse</h1>
     <button onclick="Saludar()">Saludar</button>
-    <button onclick="despedirse()">despedirse</button>
- </body> 
+    <button onclick="despedirse()">Despedirse</button>
+</body>
 </html>
