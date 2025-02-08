@@ -8,25 +8,11 @@
     <meta name=" viewport" content="width=device-width, initial-scale=1.0">
     <script>
         <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        input {
-            padding: 5px;
-            margin: 5px;
-            width: 150px;
-        }
-        button {
-            padding: 8px 15px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        .resultado {
-            font-weight: bold;
-            margin-top: 15px;
-        }
+           function mostrarmensaje() {
+               let nombre = document.getElmentById("nombre").value; 
+               let edad = parseInt(document.getElmentById("edad").value, 10);
+               document.getElementById("mensaje"). innerHTML = " Hola " + nombre + ", tienes " + edad + " años.";
+           }
     </style>
     </script>
 </head>
@@ -34,52 +20,16 @@
  <body>
     <h1>Actividad 5: Otras formas de entrada y salida de datos</h1>
     <p>Escribe un número en cada cuadro del texto y plusa en el botón para realizar los cálculos.</p> 
-    <label for="numA">Número A:</label>
-    <input type="text" id="numA" placeholder="Ingresa A">
+    <label for="Nombre">Nombre</label>
+    <input type="text" id="nombre">
+     <br></br>
     
-    <label for="numB">Número B:</label>
-    <input type="text" id="numB" placeholder="Ingresa B">
+    <label for="edad">edad</label>
+    <input type="text" id="edad">
     
-    <br>
-    <button onclick="Calcular()">Calcular</button>
+    <br></br>
+    <button onclick="mostrarmensaje()">Calcular</button>
     <p id="mensaje">¡El resultado se mostrará aquí!</p>
-
-    <div id="resultados" class="resultado"></div>
-
-    <script>
-        function Calcular() {
-        
-            let a = document.getElementById("numA").value;
-            let b = document.getElementById("numB").value;
-
-        
-            a = parseFloat(a);
-            b = parseFloat(b);
-
-        
-            if (isNaN(a) || isNaN(b)) {
-                document.getElementById("resultados").innerHTML = 
-                    "<p style='color:red;'>Por favor, ingresa valores numéricos válidos.</p>";
-                return;
-            }
-
-        
-            let suma = a + b;
-            let resta = a - b;
-            let multiplicacion = a * b;
-            let division = (b !== 0) ? (a / b) : "No se puede dividir por cero";
-            let modulo = (b !== 0) ? (a % b) : "No se puede calcular el módulo con divisor 0";
-
-            
-            document.getElementById("resultados").innerHTML =
-                `<p>Primer número (A): ${a}</p>
-                 <p>Segundo número (B): ${b}</p>
-                 <p>Suma (A + B): ${suma}</p>
-                 <p>Resta (A - B): ${resta}</p>
-                 <p>Multiplicación (A * B): ${multiplicacion}</p>
-                 <p>División (A / B): ${division}</p>
-                 <p>Módulo (A % B): ${modulo}</p>`;
-        }
     </script>
  </body> 
 </html>
