@@ -6,28 +6,27 @@
     <META name="description" content="Actividad 2 por 'Mariafé roces yactayo">
     <title>Actividad 2: Llamadas a diferentes funciones</title>
     <meta name=" viewport" content="width=device-width, initial-scale=1.0">
-    <script>
+   <script>
         function Saludar() {
-            alert("¡hola!");
-            segundafuntion("emoji")
+            alert("¡Hola!");
+            emoji(); // Llamar correctamente a la función emoji()
         }
 
         function despedirse() {
-            alert("¡:)!")
-            segundafuntion("emoji")
+            alert("¡Adiós! :)");
+            emoji(); // Llamar correctamente a la función emoji()
         }
 
         function emoji() {
-            alert("¡emoji!")
+            alert("¡Emoji!");
         }
     </script>
 </head>
-
- <body>
+<body>
     <h1>Actividad 2: Llamadas a diferentes funciones</h1>
     <p>Pulsa un botón u otro para recibir un saludo o una despedida.</p>
     <br><br>
     <button onclick="Saludar()">Saludar</button>
-    <button onclick="despedirse()">despedirse</button>
- </body> 
+    <button onclick="despedirse()">Despedirse</button>
+</body>
 </html>
