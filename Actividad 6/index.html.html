@@ -7,31 +7,35 @@
     <title>Actividad 6:Estructura condicional "si-sino" </title>
     <meta name=" viewport" content="width=device-width, initial-scale=1.0">
     <script>
-         function comprobador() {
-             let edad; 
-             edad = parseInt(prompt("¿Cuántos años tienes?"), 10); 
+        function comprobador() {
+            let número = parseInt(document.getElementById("número").value);
+             
+            if(isNaN(número)){
+                alert("por favor, ingrese un número válido.");
+                return;
+            }
 
-             if (edad < 18){
-                 alert ("Eres menor de edad"); 
-            {
-            else {
-                alert ("Eres mayor de edad");
-            {
-                alert("¿He acertado?");
-         {
-                     
-    </script>
+            if (número % 2 == 0){
+               document.getElementById("mensaje").textContent = "El número es par";
+            }
+           else {
+               document.getElementById("mensaje").textContent = "El número es impar";
+          
+        }
+     }          
+   </script>
 </head>
 
- <body>
-    <h1>Actividad 6: Estructura condicional</h1>
-    <p>Escribe un número el cuadro de texto y pulsa en el bóton para comprobar si es par o impar.</p> 
-    <label for="numero">Introduce un número:</label>
-    <input type="text" id="numero" placeholder="Ejemplo: 7">
-    
-    <br>
-    <button onclick="Comprobar()">Comprobar</button>
-    <p id="mensaje">¡El resultado se mostrará aquí!</p>
+<body>
+   <h1>Actividad 6: Estructura condicional</h1>
+   <p>Escribe un número el cuadro de texto y pulsa en el bóton para comprobar si es par o impar.</p> 
+   <label for="número">número:</label>
+   <input type="text" id=" número ">
+   
+   <br>
+   <button onclick="Comprobador()">Comprobar</button>
+   <p id="mensaje">¡El resultado se mostrará aquí!</p>
 
- </body> 
+</body> 
 </html>
+  
