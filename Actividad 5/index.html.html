@@ -7,13 +7,12 @@
     <title>Actividad 5: Otras formas de entrada y salida de datos</title>
     <meta name=" viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        <style>
-           function mostrarmensaje() {
-               let nombre = document.getElmentById("nombre").value; 
-               let edad = parseInt(document.getElmentById("edad").value, 10);
-               document.getElementById("mensaje"). innerHTML = " Hola " + nombre + ", tienes " + edad + " años.";
+       function mostrarmensaje() {
+               let nombre = document.getElementById("nombre").value; 
+               let edad = parseInt(document.getElementById("edad").value, 10);
+               document.getElementById("mensaje").innerHTML = " Hola " + nombre + ", tienes " + edad + " años.";
            }
-    </style>
+
     </script>
 </head>
 
@@ -33,3 +32,6 @@
     </script>
  </body> 
 </html>
+ 
+    
+   
