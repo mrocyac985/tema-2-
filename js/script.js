@@ -1,15 +1,15 @@
-function comprobar(){
- let nota= parseFloat(document.getElementById("nota").value, 10);
 
-    if(nota>=0 && nota<=10){
-        if(nota<5){
-            document.getElementById("resultado").innerHTML = "Suspenso.";
+        function Saludar() {
+            alert("¡Hola!");
+            emoji(); 
         }
-        else {
-            document.getElementById("resultado").innerHTML = "Aprobado.";
-         }
-    }
-    else{
-        document.getElementById("resultado").innerHTML = "El número que has puesto no válido.";
-    }
-}
+
+        function despedirse() {
+            alert("¡Adiós! :)");
+            emoji();
+        }
+        function emoji() {
+            alert("¡Emoji!");
+        }
+    
+  
